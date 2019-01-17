@@ -1,5 +1,113 @@
+:root {
+  --white: rgba(255, 255, 255, 0.8);
+  --white-alpha7: rgba(255, 255, 255, 0.7);
+  --blue: #172d8e;
+  --red: #d32d5b;
+  --grey: rgba(0, 0, 0, 0.1);
+  --pink: rgb(168, 37, 74);
+  --padding-section-desktop: 50px;
+  --padding-section-tablet: 30px;
+  --padding-section-mobile: 20px;
+  --gap-element: 20px;
+  --gap-section: 30px;
+  --font-text: font-family: 'Lato', sans-serif;
+  --font-h1-size: 3.8vw;
+  --font-text-size: 16px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
   box-sizing: border-box;
+  position: relative;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 0 var(--gap-element);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+a.lang {
+  padding: 3px;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.chosen {
+  text-decoration: underline;
+}
+a.logo-anchor {
+  padding-left: 0;
+  flex-grow: 1;
+}
+a img {
+  pointer-events: none;
+}
+h1 {
+color: var(--white);
+font-size: var(--font-h1-size);
+margin-bottom: var(--font-h1-size);
+}
+p {
+    font-size: var(--font-text-size);
+}  
+.text {
+  font-family: var(--font-text);
+  font-weight: 100;
+  margin-bottom: calc(1 * var(--font-text-size));
+}
+
+nav {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  padding: 0 var(--padding-section-desktop);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  background: white;
+}
+.logo {
+  width: 35%;
+}
+section,
+footer {
+  margin-bottom: var(--gap-section);
+  top: 70px;
+}
+section {
+  width: 100vw;
+}
+section>* {
+    padding: calc(2 * var(--padding-section-desktop));
+}
+.hero {
+  min-height: 50vw;
+  background: var(--blue);
+  color: var(--white-alpha7);
+}
+.hero h1, .hero .text {
+    width: 64%;
+}
+.wew {
+  position: absolute;
+  width: 43%;
+  right: calc(2 * var(--padding-section-desktop));
+  bottom: var(--padding-section-desktop);
+}
+
+.intro .text{
+    color: var(--blue);
+    width: 60%;
+    font-weight: 500;
+    left: 40%;
 }
