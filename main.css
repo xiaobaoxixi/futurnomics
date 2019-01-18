@@ -13,6 +13,7 @@
   --font-text: "Lato", sans-serif;
   --font-h1-size: 3.8vw;
   --font-text-size: 16px;
+  --unit: 1vw;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -144,7 +145,7 @@ footer > * {
 }
 .work-with {
   background: var(--grey);
-  height: 60vw;
+  height: calc(60 * var(--unit));
 }
 .work-with > div {
   width: 100%;
@@ -159,8 +160,8 @@ footer > * {
   transform: translate(-50%, -50%);
 }
 .work-with .red-dot-wrapper {
-  height: 20vw;
-  width: 20vw;
+  height: calc(20 * var(--unit));
+  width: calc(20 * var(--unit));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -216,49 +217,49 @@ footer > * {
   top:5vw;
 } */
 .partner-circle {
-  width: 10vw;
-  height: 10vw;
+  width: calc(10 * var(--unit));
+  height: calc(10 * var(--unit));
   border-radius: 50%;
   background: white;
   position: absolute;
-  left: 45vw;
-  top: 25vw;
-  opacity: 0;
+  left: calc(45 * var(--unit));
+  top: calc(25 * var(--unit));
+  opacity: 0.1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 .partner-circle.circle1 {
-  transform: translate(0, -15vw);
+  transform: translate(0, calc(-15 * var(--unit)));
   animation: switch 16s -0.1s infinite;
 }
 .partner-circle.circle2 {
-  transform: translate(11vw, -10.5vw);
+  transform: translate(calc(11 * var(--unit)), calc(-10.5 * var(--unit)));
   animation: switch 16s 1.9s infinite;
 }
 .partner-circle.circle3 {
-  transform: translate(15vw, 0);
+  transform: translate(calc(15 * var(--unit)), 0);
   animation: switch 16s 3.9s infinite;
 }
 .partner-circle.circle4 {
-  transform: translate(11vw, 10.5vw);
+  transform: translate(calc(11 * var(--unit)), calc(10.5 * var(--unit)));
   animation: switch 16s 5.9s infinite;
 }
 .partner-circle.circle5 {
-  transform: translate(0, 15vw);
+  transform: translate(0, calc(15 * var(--unit)));
   animation: switch 16s 7.9s infinite;
 }
 .partner-circle.circle6 {
-  transform: translate(-11vw, 10.5vw);
+  transform: translate(calc(-11 * var(--unit)), calc(10.5 * var(--unit)));
   animation: switch 16s 9.9s infinite;
 }
 .partner-circle.circle7 {
-  transform: translate(-15vw, 0);
+  transform: translate(calc(-15 * var(--unit)), 0);
   animation: switch 16s 11.9s infinite;
 }
 .partner-circle.circle8 {
-  transform: translate(-11vw, -10.5vw);
+  transform: translate(calc(-11 * var(--unit)), calc(-10.5 * var(--unit)));
   animation: switch 16s 13.9s infinite;
 }
 .partner-circle p {
@@ -268,48 +269,48 @@ footer > * {
   top: 0.5em;
 }
 .desc-circle {
-  width: 16vw;
-  height: 16vw;
+  width: calc(16 * var(--unit));
+  height: calc(16 * var(--unit));
   border-radius: 50%;
   background: var(--blue);
   position: absolute;
-  left: 42vw;
-  top: 22vw;
-  opacity: 0;
+  left: calc(42 * var(--unit));
+  top: calc(22 * var(--unit));
+  opacity: 0.1;
   display: grid;
   align-items: center;
   cursor: pointer;
 }
 .desc-circle.circle1 {
-  transform: translate(0, -25vw);
+  transform: translate(0, calc(-25 * var(--unit)));
   animation: switch 16s 0s infinite;
 }
 .desc-circle.circle2 {
-  transform: translate(18vw, -17.5vw);
+  transform: translate(calc(18 * var(--unit)), calc(-17.5 * var(--unit)));
   animation: switch 16s 2s infinite;
 }
 .desc-circle.circle3 {
-  transform: translate(25vw, 0);
+  transform: translate(calc(25 * var(--unit)), 0);
   animation: switch 16s 4s infinite;
 }
 .desc-circle.circle4 {
-  transform: translate(18vw, 17.5vw);
+  transform: translate(calc(18 * var(--unit)), calc(17.5 * var(--unit)));
   animation: switch 16s 6s infinite;
 }
 .desc-circle.circle5 {
-  transform: translate(0, 25vw);
+  transform: translate(0, calc(25 * var(--unit)));
   animation: switch 16s 8s infinite;
 }
 .desc-circle.circle6 {
-  transform: translate(-18vw, 17.5vw);
+  transform: translate(calc(-18 * var(--unit)), calc(17.5 * var(--unit)));
   animation: switch 16s 10s infinite;
 }
 .desc-circle.circle7 {
-  transform: translate(-25vw, 0);
+  transform: translate(calc(-25 * var(--unit)), 0);
   animation: switch 16s 12s infinite;
 }
 .desc-circle.circle8 {
-  transform: translate(-18vw, -17.5vw);
+  transform: translate(calc(-18 * var(--unit)), calc(-17.5 * var(--unit)));
   animation: switch 16s 14s infinite;
 }
 .desc-circle p {
@@ -326,13 +327,16 @@ footer > * {
     opacity: 1;
   }
   14% {
-    opacity: 0;
+    opacity: 0.1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.1;
   }
 }
-
+.desc-circle:hover,
+.partner-circle:hover {
+  opacity: 1;
+}
 .we-offer h2 {
   margin-bottom: 0;
 }
@@ -362,4 +366,33 @@ footer p {
 
 .hide {
   display: none;
+}
+
+@media only screen and (min-width: 1600px) {
+  :root {
+    --gap-element: 20px;
+    --gap-section: 30px;
+    --padding-section-desktop: 70px;
+    --font-h1-size: 48px;
+    --font-text-size: 16px;
+    --unit: 16px;
+  }
+  body > * {
+    width: 1600px;
+    margin: 0 auto;
+  }
+  section > * {
+    padding: var(--padding-section-desktop)
+      calc(2 * var(--padding-section-desktop));
+  }
+  nav {
+    left: calc(50vw - 800px);
+    padding: 0;
+  }
+  .hero {
+    min-height: inherit;
+  }
+  .wew {
+    width: 30%;
+  }
 }
