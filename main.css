@@ -217,6 +217,7 @@ section>*:not(.center) {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .partner-circle.circle1{
   transform: translate(0, -15vw);
@@ -267,6 +268,7 @@ section>*:not(.center) {
   opacity: 0;
   display: grid;
   align-items: center;
+  cursor: pointer;
 }
 .desc-circle.circle1{
   transform: translate(0, -25vw);
