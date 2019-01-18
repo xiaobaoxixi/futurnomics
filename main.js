@@ -5,7 +5,6 @@ function init() {
   const navAnchorS = document.querySelectorAll("nav a:not(.lang)");
   navAnchorS.forEach(a => {
     a.addEventListener("click", e => {
-      e.preventDefault();
       hightlightAnchor(e.target);
       showContent(e.target.dataset.section);
     });
