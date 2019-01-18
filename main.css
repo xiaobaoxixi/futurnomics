@@ -125,7 +125,7 @@ section>* {
     margin: 0 auto;
   }
   section>* {
-    padding: calc(2 * var(--padding-section-desktop));
+    padding: var(--padding-section-desktop) calc(2 * var(--padding-section-desktop));
   }
   nav {
     left: calc(50vw - 800px);
