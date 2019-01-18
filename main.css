@@ -100,7 +100,7 @@ section>* {
 }
 .wew {
   position: absolute;
-  width: 43%;
+  width: 40%;
   right: calc(2 * var(--padding-section-desktop));
   bottom: var(--padding-section-desktop);
 }
@@ -111,3 +111,30 @@ section>* {
     font-weight: 500;
     left: 40%;
 }
+
+@media only screen and (min-width: 1600px) {
+  :root {
+    --gap-element: 20px;
+    --gap-section: 30px;
+    --padding-section-desktop: 70px;
+    --font-h1-size: 48px;
+    --font-text-size: 16px;
+  }
+  body>* {
+    width: 1600px;
+    margin: 0 auto;
+  }
+  section>* {
+    padding: calc(2 * var(--padding-section-desktop));
+  }
+  nav {
+    left: calc(50vw - 800px);
+    padding: 0;
+  }
+  .hero {
+    min-height: inherit;
+  }
+  .wew {
+    width: 30%;
+  }
+} 
