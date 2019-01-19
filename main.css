@@ -68,6 +68,11 @@ a.logo-anchor {
   padding-left: 0;
   flex-grow: 1;
 }
+.section-cases a {
+  display: block;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
 a img {
   pointer-events: none;
 }
