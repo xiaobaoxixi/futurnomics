@@ -84,6 +84,9 @@ p {
   font-weight: 100;
   margin-bottom: calc(1 * var(--font-text-size));
 }
+.text.white {
+  color: var(--white-alpha7);
+}
 .center {
   text-align: center;
   grid-column: 1/-1;

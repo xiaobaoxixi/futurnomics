@@ -62,9 +62,16 @@ function init() {
     redDot.style.animationPlayState = "";
   }
 
-  function showContent(section) {
-    if (section) {
-      console.log(section);
+  function showContent(classKeyword) {
+    if (classKeyword !== "founder") {
+      document
+        .querySelectorAll(`.content:not(.${classKeyword}-content)`)
+        .forEach(c => {
+          c.classList.add("hide");
+        });
+      document.querySelectorAll(`.${classKeyword}-content`).forEach(s => {
+        s.classList.remove("hide");
+      });
     }
   }
 }
