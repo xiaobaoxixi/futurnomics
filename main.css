@@ -76,6 +76,9 @@ h1 {
   font-size: var(--font-h1-size);
   margin-bottom: var(--font-h1-size);
 }
+h4:not(:first-of-type) {
+  margin-top: 2rem;
+}
 p {
   font-size: var(--font-text-size);
 }
@@ -86,6 +89,9 @@ p {
 }
 .text.white {
   color: var(--white-alpha7);
+}
+.grey-bg {
+  background: var(--grey);
 }
 .center {
   text-align: center;
@@ -99,7 +105,22 @@ p {
 .grid-three .grid-item {
   padding: var(--padding-section-mobile);
 }
-
+.grid-two-uneven {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: var(--gap-section);
+}
+.grid-two-even {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap-section);
+}
+.grid-two-even h4 {
+  grid-row-start: 1;
+}
+.grid-two-even > *:last-child {
+  grid-column: 1/-1;
+}
 nav {
   position: fixed;
   height: 70px;
@@ -146,8 +167,12 @@ footer > * {
   font-weight: 500;
   left: 40%;
 }
+.intro img {
+  width: 40%;
+  position: absolute;
+  left: 0;
+}
 .work-with {
-  background: var(--grey);
   height: calc(60 * var(--unit));
 }
 .work-with > div {
