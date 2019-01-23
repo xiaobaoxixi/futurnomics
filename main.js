@@ -63,7 +63,7 @@ function init() {
   }
 
   function showContent(classKeyword) {
-    if (classKeyword !== "founder") {
+    if (classKeyword) {
       document
         .querySelectorAll(`.content:not(.${classKeyword}-content)`)
         .forEach(c => {
