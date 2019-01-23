@@ -9,10 +9,10 @@
   --padding-section-tablet: 30px;
   --padding-section-mobile: 20px;
   --gap-element: 20px;
-  --gap-section: 30px;
+  --gap-section: 40px;
   --font-text: "Lato", sans-serif;
   --font-h1-size: 3.8vw;
-  --font-text-size: 16px;
+  --font-text-size: 17px;
   --unit: 1vw;
 }
 ::-webkit-scrollbar {
@@ -37,6 +37,9 @@ p,
 li {
   color: var(--blue);
   margin-bottom: 1rem;
+}
+h2 {
+  border-right: 2px solid var(--blue);
 }
 li {
   margin-bottom: 0;
@@ -159,9 +162,25 @@ footer > * {
   background: var(--blue);
   color: var(--white-alpha7);
 }
+.hero.close {
+  height: 3px;
+  min-height: 3px;
+  padding: 0;
+  overflow: hidden;
+}
+.hero.half {
+  min-height: 30vw;
+  overflow: hidden;
+}
 .hero h1,
 .hero .text {
   width: 64%;
+}
+.hero.half h1 {
+  margin-bottom: calc(0.3 * var(--font-h1-size));
+}
+.hero.half h1 + p {
+  width: 50%;
 }
 .wew {
   position: absolute;

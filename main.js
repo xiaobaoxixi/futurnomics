@@ -2,6 +2,11 @@
 
 window.addEventListener("DOMContentLoaded", init);
 function init() {
+  let section = window.localStorage.getItem("section");
+  if (section) {
+    showContent(section);
+  }
+
   const navAnchorS = document.querySelectorAll("nav a:not(.lang)");
   navAnchorS.forEach(a => {
     a.addEventListener("click", e => {
@@ -63,7 +68,21 @@ function init() {
   }
 
   function showContent(classKeyword) {
+    if (
+      classKeyword === "entre" ||
+      classKeyword === "intra" ||
+      classKeyword === "founder"
+    ) {
+      window.localStorage.setItem("section", classKeyword);
+    } else if (classKeyword === "home") {
+      window.localStorage.removeItem("section");
+    } else {
+      console.log(classKeyword);
+    }
+
     if (classKeyword) {
+      document.querySelector(".hero").classList.remove("close");
+      document.querySelector(".hero").classList.remove("half");
       document
         .querySelectorAll(`.content:not(.${classKeyword}-content)`)
         .forEach(c => {
@@ -72,6 +91,12 @@ function init() {
       document.querySelectorAll(`.${classKeyword}-content`).forEach(s => {
         s.classList.remove("hide");
       });
+    }
+    if (classKeyword === "founder") {
+      document.querySelector(".hero").classList.add("close");
+    }
+    if (classKeyword === "entre" || classKeyword === "intra") {
+      document.querySelector(".hero").classList.add("half");
     }
   }
 }
