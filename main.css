@@ -380,6 +380,32 @@ footer > * {
   top: 19%;
   left: 52%;
 }
+
+.founder {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-gap: var(--gap-element);
+}
+.book {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-gap: var(--gap-element);
+}
+.founder-desc,
+.book-desc {
+  line-height: 1.5;
+}
+img.portrait {
+  height: 400px;
+  position: absolute;
+  right: 0;
+}
+img.book {
+  height: 400px;
+}
+.book-link {
+  padding: 0;
+}
 footer {
   background: var(--blue);
 }
