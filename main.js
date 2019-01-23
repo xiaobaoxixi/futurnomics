@@ -5,6 +5,9 @@ function init() {
   let section = window.localStorage.getItem("section");
   if (section) {
     showContent(section);
+    document
+      .querySelector(`[data-section="${section}"]`)
+      .classList.add("chosen");
   }
 
   const navAnchorS = document.querySelectorAll("nav a:not(.lang)");
