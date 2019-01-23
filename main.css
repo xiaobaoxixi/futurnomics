@@ -55,14 +55,16 @@ a:visited {
 a.lang {
   padding: 3px;
 }
-a.lang:not(.chosen) {
+a.lang:not(.active) {
   opacity: 0.3;
 }
 a:hover {
   text-decoration: underline;
 }
-a.chosen {
+a.chosen,
+a.active {
   text-decoration: underline;
+  opacity: 1;
 }
 a.logo-anchor {
   padding-left: 0;

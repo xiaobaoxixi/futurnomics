@@ -15,7 +15,7 @@ function init() {
       elem.classList.remove("chosen");
     } else {
       if (document.querySelector(".chosen")) {
-        document.querySelector(".chosen").classList.remove("chosen");
+        document.querySelector(".chosen:not(.lang)").classList.remove("chosen");
       }
       elem.classList.add("chosen");
     }
