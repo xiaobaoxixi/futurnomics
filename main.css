@@ -38,7 +38,7 @@ li {
   color: var(--blue);
   margin-bottom: 1rem;
 }
-h2 {
+h2:not(.no-border) {
   border-right: 2px solid var(--blue);
 }
 li {
@@ -88,6 +88,9 @@ h1 {
 }
 h4:not(:first-of-type) {
   margin-top: 2rem;
+}
+h4.no-margin-top {
+  margin-top: 0;
 }
 p {
   font-size: var(--font-text-size);
