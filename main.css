@@ -2,18 +2,18 @@
   --white: rgba(255, 255, 255, 0.8);
   --white-alpha7: rgba(255, 255, 255, 0.7);
   --blue: #172d8e;
-  --red: #d32d5b;
-  --grey: rgba(200, 200, 200, 0.1);
+  --red: #900603;
+  --grey: rgba(209, 209, 209, 0.1);
   --pink: rgb(168, 37, 74);
   --padding-section-desktop: 50px;
   --padding-section-tablet: 30px;
   --padding-section-mobile: 20px;
-  --gap-element: 20px;
+  --gap-element: 30px;
   --gap-section: 40px;
   --font-text: "Lato", sans-serif;
   --font-h1-size: 3.8vw;
   --font-text-size: 17px;
-  --unit: 1vw;
+  --unit: 0.8vw;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -106,6 +106,9 @@ p {
 .grey-bg {
   background: var(--grey);
 }
+.grey-bg.clip {
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
 .center {
   text-align: center;
   grid-column: 1/-1;
@@ -148,7 +151,7 @@ nav {
   background: white;
 }
 .logo {
-  width: 35%;
+  width: 300px;
 }
 section,
 footer {
@@ -167,6 +170,7 @@ footer > * {
   min-height: 50vw;
   background: var(--blue);
   color: var(--white-alpha7);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .hero.close {
   height: 3px;
@@ -175,8 +179,9 @@ footer > * {
   overflow: hidden;
 }
 .hero.half {
-  min-height: 30vw;
+  min-height: 33vw;
   overflow: hidden;
+  clip-path: none;
 }
 .hero h1,
 .hero .text {
@@ -187,25 +192,27 @@ footer > * {
 }
 .hero.half h1 + p {
   width: 50%;
+  font-size: 1.3em;
 }
 .wew {
   position: absolute;
   width: 43%;
   right: calc(2 * var(--padding-section-desktop));
-  bottom: var(--padding-section-desktop);
+  bottom: calc(2 * var(--padding-section-desktop));
 }
 .intro .text {
-  width: 60%;
+  width: 55%;
   font-weight: 500;
-  left: 40%;
+  left: 45%;
 }
 .intro img {
-  width: 40%;
+  width: 47%;
   position: absolute;
   left: 0;
+  top: -30px;
 }
 .work-with {
-  height: calc(60 * var(--unit));
+  height: calc(80 * var(--unit));
 }
 .work-with > div {
   width: 100%;
@@ -291,40 +298,39 @@ footer > * {
   cursor: pointer;
 }
 .partner-circle.circle1 {
-  transform: translate(0, calc(-15 * var(--unit)));
+  transform: translate(calc(12.5 * var(--unit)), calc(-5 * var(--unit)));
   animation: switch 16s -0.1s infinite;
 }
 .partner-circle.circle2 {
-  transform: translate(calc(11 * var(--unit)), calc(-10.5 * var(--unit)));
+  transform: translate(calc(23.5 * var(--unit)), calc(-0.5 * var(--unit)));
   animation: switch 16s 1.9s infinite;
 }
 .partner-circle.circle3 {
-  transform: translate(calc(15 * var(--unit)), 0);
+  transform: translate(calc(27.5 * var(--unit)), calc(10 * var(--unit)));
   animation: switch 16s 3.9s infinite;
 }
 .partner-circle.circle4 {
-  transform: translate(calc(11 * var(--unit)), calc(10.5 * var(--unit)));
+  transform: translate(calc(23.5 * var(--unit)), calc(20.5 * var(--unit)));
   animation: switch 16s 5.9s infinite;
 }
 .partner-circle.circle5 {
-  transform: translate(0, calc(15 * var(--unit)));
+  transform: translate(calc(12.5 * var(--unit)), calc(25 * var(--unit)));
   animation: switch 16s 7.9s infinite;
 }
 .partner-circle.circle6 {
-  transform: translate(calc(-11 * var(--unit)), calc(10.5 * var(--unit)));
+  transform: translate(calc(1.5 * var(--unit)), calc(20.5 * var(--unit)));
   animation: switch 16s 9.9s infinite;
 }
 .partner-circle.circle7 {
-  transform: translate(calc(-15 * var(--unit)), 0);
+  transform: translate(calc(-2.5 * var(--unit)), calc(10 * var(--unit)));
   animation: switch 16s 11.9s infinite;
 }
 .partner-circle.circle8 {
-  transform: translate(calc(-11 * var(--unit)), calc(-10.5 * var(--unit)));
+  transform: translate(calc(1.5 * var(--unit)), calc(-0.5 * var(--unit)));
   animation: switch 16s 13.9s infinite;
 }
 .partner-circle p {
   font-weight: bold;
-  width: 70%;
   text-align: center;
   top: 0.5em;
 }
@@ -342,35 +348,35 @@ footer > * {
   cursor: pointer;
 }
 .desc-circle.circle1 {
-  transform: translate(0, calc(-25 * var(--unit)));
+  transform: translate(calc(12.5 * var(--unit)), calc(-15 * var(--unit)));
   animation: switch 16s 0s infinite;
 }
 .desc-circle.circle2 {
-  transform: translate(calc(18 * var(--unit)), calc(-17.5 * var(--unit)));
+  transform: translate(calc(30.5 * var(--unit)), calc(-7.5 * var(--unit)));
   animation: switch 16s 2s infinite;
 }
 .desc-circle.circle3 {
-  transform: translate(calc(25 * var(--unit)), 0);
+  transform: translate(calc(37.5 * var(--unit)), calc(10 * var(--unit)));
   animation: switch 16s 4s infinite;
 }
 .desc-circle.circle4 {
-  transform: translate(calc(18 * var(--unit)), calc(17.5 * var(--unit)));
+  transform: translate(calc(30.5 * var(--unit)), calc(27.5 * var(--unit)));
   animation: switch 16s 6s infinite;
 }
 .desc-circle.circle5 {
-  transform: translate(0, calc(25 * var(--unit)));
+  transform: translate(calc(12.5 * var(--unit)), calc(35 * var(--unit)));
   animation: switch 16s 8s infinite;
 }
 .desc-circle.circle6 {
-  transform: translate(calc(-18 * var(--unit)), calc(17.5 * var(--unit)));
+  transform: translate(calc(-5.5 * var(--unit)), calc(27.5 * var(--unit)));
   animation: switch 16s 10s infinite;
 }
 .desc-circle.circle7 {
-  transform: translate(calc(-25 * var(--unit)), 0);
+  transform: translate(calc(-12.5 * var(--unit)), calc(10 * var(--unit)));
   animation: switch 16s 12s infinite;
 }
 .desc-circle.circle8 {
-  transform: translate(calc(-18 * var(--unit)), calc(-17.5 * var(--unit)));
+  transform: translate(calc(-5.5 * var(--unit)), calc(-7.5 * var(--unit)));
   animation: switch 16s 14s infinite;
 }
 .desc-circle p {
@@ -402,8 +408,8 @@ footer > * {
 }
 .we-offer .red-dot {
   padding: 0;
-  top: 19%;
-  left: 52%;
+  top: 14.5%;
+  left: 52.5%;
 }
 .pie {
   width: 200px;

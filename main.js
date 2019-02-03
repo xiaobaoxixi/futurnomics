@@ -108,6 +108,11 @@ function init() {
   allStepS.forEach(s => {
     const stepNr = s.dataset.step;
     s.addEventListener("mouseenter", e => {
+      if (stepNr !== "one") {
+        document
+          .querySelector(`.step-one`)
+          .setAttribute("src", `img/one-without-text.png`);
+      }
       allStepS.forEach(as => {
         as.style.zIndex = "initial";
       });
@@ -118,15 +123,19 @@ function init() {
       e.target.style.zIndex = "5";
       e.target.setAttribute("src", `img/${stepNr}-text.png`);
     });
-    if (stepNr !== "one") {
-      s.addEventListener("mouseleave", e => {
-        e.target.style.zIndex = "initial";
-        e.target.setAttribute("src", `img/${stepNr}-without-text.png`);
-        allStepDescS.forEach(asd => {
-          asd.classList.add("hide");
-        });
-        document.querySelector(`.step-desc-one`).classList.remove("hide");
+    //    if (stepNr !== "one") {
+    s.addEventListener("mouseleave", e => {
+      e.target.style.zIndex = "initial";
+      e.target.setAttribute("src", `img/${stepNr}-without-text.png`);
+      allStepDescS.forEach(asd => {
+        asd.classList.add("hide");
       });
-    }
+      document.querySelector(`.step-desc-one`).classList.remove("hide");
+    });
+    //    }
+  });
+  const stepArea = document.querySelector(".steps");
+  stepArea.addEventListener("mouseleave", () => {
+    document.querySelector(`.step-one`).setAttribute("src", `img/one-text.png`);
   });
 }
