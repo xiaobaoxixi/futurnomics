@@ -19,6 +19,13 @@
   display: none;
 }
 
+.temp {
+  background: rgb(255, 234, 41);
+  padding: 17px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -526,12 +533,13 @@ footer p {
 
 @media only screen and (max-width: 1200px) {
   :root {
-    --padding-section-desktop: 50px;
-    --padding-section-tablet: 30px;
-    --padding-section-mobile: 20px;
+    --padding-section-desktop: 40px;
     --gap-element: 15px;
     --gap-section: 30px;
     --font-h1-size: 40px;
+  }
+  .logo {
+    width: 250px;
   }
   .hero.half {
     min-height: 43vw;
