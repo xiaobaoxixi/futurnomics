@@ -149,6 +149,7 @@ nav {
   align-items: center;
   z-index: 1;
   background: white;
+  border-bottom: 0.5px solid rgba(0, 0, 255, 0.1);
 }
 .logo {
   width: 300px;
