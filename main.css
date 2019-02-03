@@ -8,7 +8,7 @@
   --padding-section-desktop: 50px;
   --padding-section-tablet: 30px;
   --padding-section-mobile: 20px;
-  --gap-element: 30px;
+  --gap-element: 35px;
   --gap-section: 40px;
   --font-text: "Lato", sans-serif;
   --font-h1-size: 3.8vw;
@@ -211,6 +211,7 @@ footer > * {
   position: absolute;
   left: 0;
   top: -30px;
+  z-index: -1;
 }
 .work-with {
   height: calc(80 * var(--unit));
@@ -501,7 +502,7 @@ footer p {
     --padding-section-desktop: 70px;
     --font-h1-size: 48px;
     --font-text-size: 16px;
-    --unit: 16px;
+    --unit: 12.8px;
   }
   body > * {
     width: 1600px;
@@ -521,4 +522,27 @@ footer p {
   .wew {
     width: 30%;
   }
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --padding-section-desktop: 50px;
+    --padding-section-tablet: 30px;
+    --padding-section-mobile: 20px;
+    --gap-element: 15px;
+    --gap-section: 30px;
+    --font-h1-size: 40px;
+  }
+  .hero.half {
+    min-height: 43vw;
+  }
+  .desc-circle p,
+  .partner-circle p {
+    font-size: 12px;
+  }
+  .work-with {
+    transform: scale(1.3);
+  }
+}
+@media only screen and (max-width: 968px) {
 }
